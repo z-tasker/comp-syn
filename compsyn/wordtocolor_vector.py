@@ -113,6 +113,7 @@ class WordToColorVector(Vector):
         max_items: int = 100,
         extra_query_params: Optional[Dict[str, str]] = None,
         include_related: bool = False,
+        use_proxy: Optional[str] = None,
         overwrite: bool = False,
     ) -> None:
         """ Gather images from Google Images sets the attribute `self.raw_image_urls`"""
@@ -151,6 +152,7 @@ class WordToColorVector(Vector):
             driver_path=self.metadata["driver_path"],
             extra_query_params=extra_query_params,
             track_related=include_related,
+            use_proxy=use_proxy,
         )
 
         if include_related:
